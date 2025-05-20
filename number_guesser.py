@@ -32,11 +32,11 @@ while True:
         else:
             print("You got it! It took you ", guess_counter, " guesses ")
         break  # ends the while-loop
+    elif user_guess < random_number:
+        print("Your guess is too low! Try again!")
+        guess_counter += 1
     else:
-        if user_guess <= random_number:
-            print("Your guess is too low! Try again!")
-        else:
-            print("Your guess is too high! Try again!")
+        print("Your guess is too high! Try again!")
         guess_counter += 1
 
 
@@ -49,4 +49,4 @@ while True:
 
 # Added guess-counter to keep score
 
-# Decided to add hints for user input, informing whether guess was too high or low, using nested if-else statements
+# Decided to add hints for user input, informing whether guess was too high or low, using elif statements
